@@ -2,7 +2,11 @@
 #ifndef SOUND_ENGINE_H
 #define SOUND_ENGINE_H
 #include <SFML/Audio.hpp>
+#include <assert.h>
+
 using namespace sf;
+using namespace std;
+
 class SoundEngine
 {
 private:
