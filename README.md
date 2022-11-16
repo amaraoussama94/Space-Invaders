@@ -21,7 +21,7 @@ Enter to pause and start game </br>
 
 *Game name:Sapce Invaders</br>
 *version :0.1</br>
-*here we use :entity-component pattern ,Strategy pattern(composition),Factory pattern ,C++ smart pointers(shared pointers,Unique pointers)</br>
+*here we use :entity-component pattern ,Strategy pattern(composition),Factory pattern ,C++ smart pointers(shared pointers,Unique pointers),assertions.</br>
 <h3 align="left">diagram:</h3>   
 <!--<p align="center">
     <img src="https://github.com/amaraoussama94/Thomas-Wass-Alone/blob/main/game_pic.png"  >  
