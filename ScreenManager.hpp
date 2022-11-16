@@ -16,6 +16,8 @@ using namespace std;
 class ScreenManager : public ScreenManagerRemoteControl 
 {
 private:
+    //This will allow us to grab the functionality of a specific Screen
+    //instance by using the corresponding string
     map <string, unique_ptr<Screen>> m_Screens;
     //LevelManager m_LevelManager;
     protected:
