@@ -1,6 +1,6 @@
 #main app
-Sapce_Invaders: GameEngine.o  SpaceInvaders++.o  SoundEngine.o ScreenManager.o BitmapStore.o
-	g++ Engine.o  SpaceInvaders++.o SoundEngine.o ScreenManager.o BitmapStore.o -o Sapce_Invaders -lsfml-graphics -lsfml-window -lsfml-audio -lsfml-system  
+Sapce_Invaders: GameEngine.o  SpaceInvaders++.o  SoundEngine.o ScreenManager.o BitmapStore.o Button.o
+	g++ Engine.o  SpaceInvaders++.o SoundEngine.o ScreenManager.o BitmapStore.o Button.o -o Sapce_Invaders -lsfml-graphics -lsfml-window -lsfml-audio -lsfml-system  
 
 
 GameEngine.o:GameEngine.cpp  
@@ -23,7 +23,9 @@ ScreenManager.o:ScreenManager.cpp
 BitmapStore.o:BitmapStore.cpp
 	g++ -c BitmapStore.cpp 
 
-
+#Button class 
+Button.o:Button.cpp
+	g++ -c Button.cpp 
 clean:
 #cleanup all object file
 	  -rm *.o $(objects) 
