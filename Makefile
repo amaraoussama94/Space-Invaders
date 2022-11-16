@@ -1,10 +1,10 @@
 #main app
-Sapce_Invaders:   Engine.o  SpaceInvaders++.o
+Sapce_Invaders:   GameEngine.o  SpaceInvaders++.o
 	g++ Engine.o  SpaceInvaders++.o  -o Sapce_Invaders -lsfml-graphics -lsfml-window -lsfml-audio -lsfml-system  
 
 
-Engine.o:Engine.cpp  
-	g++ -c Engine.cpp
+GameEngine.o:GameEngine.cpp  
+	g++ -c GameEngine.cpp
 
 	
 #SpaceInvaders++ Function
