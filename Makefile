@@ -1,5 +1,5 @@
 #main app
-Thomas:   Engine.o  SpaceInvaders++.o
+Sapce_Invaders:   Engine.o  SpaceInvaders++.o
 	g++ Engine.o  SpaceInvaders++.o  -o Sapce_Invaders -lsfml-graphics -lsfml-window -lsfml-audio -lsfml-system  
 
 
