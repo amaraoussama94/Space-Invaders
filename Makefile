@@ -26,6 +26,11 @@ BitmapStore.o:BitmapStore.cpp
 #Button class 
 Button.o:Button.cpp
 	g++ -c Button.cpp 
+
+#UIPanel class 
+UIPanel.o:UIPanel.cpp
+	g++ -c UIPanel.cpp 
+
 clean:
 #cleanup all object file
 	  -rm *.o $(objects) 
