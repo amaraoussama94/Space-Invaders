@@ -1,8 +1,10 @@
 #pragma once
+
 #include <string>
 #include <vector>
-//#include "GameObject.h"
-//#include "GameObjectSharer.h"
+
+//#include "GameObject.hpp"
+//#include "GameObjectSharer.hpp"
 using namespace std;
 class ScreenManagerRemoteControl
 {
