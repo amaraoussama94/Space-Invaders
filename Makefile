@@ -1,15 +1,15 @@
 #main app
-Thomas:   Engine.o  
-	g++ Engine.o   -o Sapce_Invaders -lsfml-graphics -lsfml-window -lsfml-audio -lsfml-system  
+Thomas:   Engine.o  SpaceInvaders++.o
+	g++ Engine.o  SpaceInvaders++.o  -o Sapce_Invaders -lsfml-graphics -lsfml-window -lsfml-audio -lsfml-system  
 
 
-Engine.o:Engine.cpp
+Engine.o:Engine.cpp  
 	g++ -c Engine.cpp
 
 	
-#Engine Function
-Input.o:Input.cpp
-	g++ -c Input.cpp 
+#SpaceInvaders++ Function
+SpaceInvaders++.o:SpaceInvaders++.cpp
+	g++ -c SpaceInvaders++.cpp 
 
 
 clean:
