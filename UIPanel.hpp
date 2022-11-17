@@ -1,7 +1,8 @@
 #pragma once
+#include <memory>// for shared pointer elkse  you will get error  unique pointer doest need it 
 #include <SFML/Graphics.hpp>
 #include "Button.hpp"
-
+ 
 using namespace std;
 
 class UIPanel {
