@@ -55,6 +55,7 @@ void InputHandler::handleInput(RenderWindow& window,
 	handleGamepad();
 }
 
+
 void InputHandler::handleGamepad()
 {}// Do nothing unless handled by a derived class
 
