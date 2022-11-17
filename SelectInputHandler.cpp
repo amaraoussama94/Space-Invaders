@@ -17,7 +17,7 @@ void SelectInputHandler::handleKeyPressed(Event& event, RenderWindow& window)
 void SelectInputHandler::handleLeftClick(std::string& buttonInteractedWith, RenderWindow& window)
 {
     if (buttonInteractedWith == "Play") 
-    {
+    {   std::cout<<"hello ";
         SoundEngine::playClick();
         WorldState::WAVE_NUMBER = 0;
         getPointerToScreenManagerRemoteControl()->loadLevelInPlayMode("level1");

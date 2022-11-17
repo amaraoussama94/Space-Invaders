@@ -1,6 +1,6 @@
 #pragma once
 #include <SFML/Graphics.hpp>
- 
+
 using namespace sf;
 
 class Button
@@ -12,7 +12,7 @@ private:
 
 public:
 	std::string m_Text;
-	FloatRect m_Collider;//used to detect mouse clicks on the button
+	FloatRect m_Collider;
 
 	Button(Vector2f position,
 		float width, float height,

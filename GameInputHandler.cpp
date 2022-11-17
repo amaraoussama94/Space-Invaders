@@ -18,7 +18,7 @@ void GameInputHandler::handleKeyPressed(Event& event, RenderWindow& window)
         //the ScreenMangerRemoteControl pointer calls the
         //SwitchScreen function to go back to the select screen
         SoundEngine::playClick();
-        getPointerToScreenManagerRemoteControl()->SwitchScreens("Select");
+		getPointerToScreenManagerRemoteControl()->SwitchScreens("Select");
     }
 }
 void GameInputHandler::handleKeyReleased(Event& event, RenderWindow& window)

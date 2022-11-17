@@ -19,7 +19,7 @@ res.y / 3, // and as tall as 1/3 of the resolution
     m_Font.loadFromFile("fonts/Roboto-Bold.ttf");
     m_Text.setFont(m_Font);
     m_Text.setPosition(Vector2f(m_ButtonPadding, m_ButtonHeight + (m_ButtonPadding * 2)));
-    m_Text.setCharacterSize(160);
+    m_Text.setCharacterSize(110);
     initialiseButtons();
 }
 
