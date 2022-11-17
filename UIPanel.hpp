@@ -2,14 +2,13 @@
 #include <memory>// for shared pointer elkse  you will get error  unique pointer doest need it 
 #include <SFML/Graphics.hpp>
 #include "Button.hpp"
- 
+
 using namespace std;
 
 class UIPanel {
 private:
 	RectangleShape m_UIPanel;
 	bool m_Hidden = false;
-	  //to hold all the Button instances for this panel
 	vector<shared_ptr<Button>> m_Buttons;
 
 protected:
