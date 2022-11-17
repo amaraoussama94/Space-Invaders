@@ -23,7 +23,7 @@ GameScreen::GameScreen(ScreenManagerRemoteControl* smrc,Vector2i res)
     m_BackgroundSprite.setScale(float(m_View.getSize().x) /textureSize.x,float(m_View.getSize().y) / textureSize.y);
 }
 
-void GameScreen::initialise()
+void GameScreen::initialise()//initialize
 {
     m_GIH->initialize();
     WorldState::NUM_INVADERS = 0;
