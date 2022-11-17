@@ -1,8 +1,8 @@
 #main app
-Sapce_Invaders: GameEngine.o  SpaceInvaders++.o  SoundEngine.o ScreenManager.o BitmapStore.o Button.o UIPanel.o InputHandler.o Screen.o SelectScreen.o SelectInputHandler.o SelectUIPanel.o GameScreen.o GameInputHandler.o GameUIPanel.o GameOverInputHandler.o                                                                                                                                                                                
-	g++ Engine.o  SpaceInvaders++.o SoundEngine.o ScreenManager.o BitmapStore.o Button.o UIPanel.o InputHandler.o  Screen.o SelectScreen.o SelectInputHandler.o SelectUIPanel.o  GameScreen.o GameInputHandler.o GameUIPanel.o  GameOverInputHandler.o -o Sapce_Invaders -lsfml-graphics -lsfml-window -lsfml-audio -lsfml-system  
+Sapce_Invaders: GameEngine.o  SpaceInvaders++.o  SoundEngine.o ScreenManager.o BitmapStore.o Button.o UIPanel.o InputHandler.o Screen.o SelectScreen.o SelectInputHandler.o SelectUIPanel.o GameScreen.o GameInputHandler.o GameUIPanel.o GameOverInputHandler.o   GameOverUIPanel.o                                                                                                                                                                              
+	g++ Engine.o  SpaceInvaders++.o SoundEngine.o ScreenManager.o BitmapStore.o Button.o UIPanel.o InputHandler.o  Screen.o SelectScreen.o SelectInputHandler.o SelectUIPanel.o  GameScreen.o GameInputHandler.o GameUIPanel.o  GameOverInputHandler.o GameOverUIPanel.o -o Sapce_Invaders -lsfml-graphics -lsfml-window -lsfml-audio -lsfml-system  
 
-
+GameOverUIPanel.o
 GameEngine.o:GameEngine.cpp  
 	g++ -c GameEngine.cpp
 
@@ -37,7 +37,7 @@ InputHandler.o:InputHandler.cpp
 
 #Screen   class 
 Screen.o:Screen.cpp
-	g++ -c Screen.cpp 
+	g++ -c Screen.cpp GameOverUIPanel.o
 
 #Select Screen   class 
 SelectScreen.o:SelectScreen.cpp
@@ -68,6 +68,12 @@ GameUIPanel.o:GameUIPanel.cpp
 #Game Over Input Handler
 GameOverInputHandler.o:GameOverInputHandler.cpp
 	g++ -c GameOverInputHandler.cpp 
+
+
+#GameOverUIPanel
+GameOverUIPanel.o:GameOverUIPanel.cpp
+	g++ -c GameOverUIPanel.cpp 
+
 
 clean:
 #cleanup all object file
