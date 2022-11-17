@@ -33,14 +33,12 @@ public:
     From ScreenManagerRemoteControl interface
     *****************************************************
     *****************************************************/
-    void ScreenManagerRemoteControl::
-    SwitchScreens(string screenToSwitchTo)
+    void  SwitchScreens(string screenToSwitchTo)
     {
         m_CurrentScreen = "" + screenToSwitchTo;
         m_Screens[m_CurrentScreen]->initialise();
     }
-    void ScreenManagerRemoteControl::
-    loadLevelInPlayMode(string screenToLoad)
+    void loadLevelInPlayMode(string screenToLoad)
     {
         //m_LevelManager.getGameObjects().clear();
         //m_LevelManager.

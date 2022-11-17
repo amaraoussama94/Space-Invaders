@@ -1,4 +1,4 @@
-#include "GameScreen.h"
+#include "GameScreen.hpp"
 
 int WorldState::WORLD_HEIGHT;
 int WorldState::NUM_INVADERS;

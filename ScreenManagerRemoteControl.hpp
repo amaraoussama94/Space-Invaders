@@ -2,7 +2,7 @@
 
 #include <string>
 #include <vector>
-
+#include <memory>
 //#include "GameObject.hpp"
 //#include "GameObjectSharer.hpp"
 using namespace std;
