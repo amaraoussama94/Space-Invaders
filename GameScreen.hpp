@@ -1,8 +1,10 @@
 #pragma once
 #include "Screen.hpp"
 #include "GameInputHandler.hpp"
+#include "GameUIPanel.hpp"
 #include "GameOverInputHandler.hpp"
-
+#include "GameOverUIPanel.hpp"
+#include "WorldState.hpp"
 class GameScreen : public Screen
 {
 private:
