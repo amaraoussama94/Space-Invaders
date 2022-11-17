@@ -65,6 +65,10 @@ GameInputHandler.o:GameInputHandler.cpp
 GameUIPanel.o:GameUIPanel.cpp
 	g++ -c GameUIPanel.cpp 
 
+#Game Over Input Handler
+GameOverInputHandler.o:GameOverInputHandler.cpp
+	g++ -c GameOverInputHandler.cpp 
+
 clean:
 #cleanup all object file
 	  -rm *.o $(objects) 

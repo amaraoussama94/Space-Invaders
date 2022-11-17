@@ -1,6 +1,8 @@
 #pragma once
 #include "InputHandler.hpp"
-
+#include "SoundEngine.hpp"
+#include "WorldState.hpp"
+#include <iostream>
 class GameOverInputHandler :public InputHandler
 {
 public:
