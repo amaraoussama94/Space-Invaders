@@ -1,6 +1,6 @@
 #main app
-Sapce_Invaders: GameEngine.o  SpaceInvaders++.o  SoundEngine.o ScreenManager.o BitmapStore.o Button.o UIPanel.o InputHandler.o Screen.o SelectScreen.o SelectInputHandler.o SelectUIPanel.o GameScreen.o GameInputHandler.o GameUIPanel.o GameOverInputHandler.o   GameOverUIPanel.o RectColliderComponent.o StandardGraphicsComponent.o  TransformComponent.o BulletUpdateComponent.o InvaderUpdateComponent.o PlayerUpdate.o                                                                                                                                                                         
-	g++ GameEngine.o  SpaceInvaders++.o SoundEngine.o ScreenManager.o BitmapStore.o Button.o UIPanel.o InputHandler.o  Screen.o SelectScreen.o SelectInputHandler.o SelectUIPanel.o  GameScreen.o GameInputHandler.o GameUIPanel.o  GameOverInputHandler.o GameOverUIPanel.o RectColliderComponent.o StandardGraphicsComponent.o TransformComponent.o BulletUpdateComponent.o InvaderUpdateComponent.o PlayerUpdate.o -o Sapce_Invaders -lsfml-graphics -lsfml-window -lsfml-audio -lsfml-system  
+Sapce_Invaders: GameEngine.o  SpaceInvaders++.o  SoundEngine.o ScreenManager.o BitmapStore.o Button.o UIPanel.o InputHandler.o Screen.o SelectScreen.o SelectInputHandler.o SelectUIPanel.o GameScreen.o GameInputHandler.o GameUIPanel.o GameOverInputHandler.o   GameOverUIPanel.o RectColliderComponent.o StandardGraphicsComponent.o  TransformComponent.o BulletUpdateComponent.o InvaderUpdateComponent.o PlayerUpdate.o  GameObject.o                                                                                                                                                                        
+	g++ GameEngine.o  SpaceInvaders++.o SoundEngine.o ScreenManager.o BitmapStore.o Button.o UIPanel.o InputHandler.o  Screen.o SelectScreen.o SelectInputHandler.o SelectUIPanel.o  GameScreen.o GameInputHandler.o GameUIPanel.o  GameOverInputHandler.o GameOverUIPanel.o RectColliderComponent.o StandardGraphicsComponent.o TransformComponent.o BulletUpdateComponent.o InvaderUpdateComponent.o PlayerUpdate.o GameObject.o -o Sapce_Invaders -lsfml-graphics -lsfml-window -lsfml-audio -lsfml-system  
 
 #*
 GameEngine.o:GameEngine.cpp  
@@ -98,6 +98,10 @@ InvaderUpdateComponent.o:InvaderUpdateComponent.cpp
 #Player Update *
 PlayerUpdate.o:PlayerUpdate.cpp
 	g++ -c PlayerUpdate.cpp 
+
+#Game Object *
+GameObject.o:GameObject.cpp
+	g++ -c GameObject.cpp 
 
 clean:
 #cleanup all object file
