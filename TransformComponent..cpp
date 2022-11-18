@@ -1,4 +1,4 @@
- #include "TransformComponent.hpp"
+#include "TransformComponent.hpp"
 
 TransformComponent::TransformComponent(float width, float height, Vector2f location)
 {
