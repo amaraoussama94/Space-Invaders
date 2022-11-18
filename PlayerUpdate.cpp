@@ -3,7 +3,7 @@
 
 void PlayerUpdateComponent::update(float fps)
 {
-    if (sf::Joystick::isConnected(0))
+    if (sf::Joystick::isConnected(0))//This condition returns true when the player has a gamepad plugged in to a USB port
     {
         m_TC->getLocation().x += ((m_Speed / 100)* m_XExtent) * fps;
         m_TC->getLocation().y += ((m_Speed / 100)* m_YExtent) * fps;
