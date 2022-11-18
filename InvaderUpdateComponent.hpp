@@ -10,10 +10,15 @@ class InvaderUpdateComponent : public UpdateComponent
 {
 private:
     string m_SpecificType = "invader";
-    shared_ptr<TransformComponent> m_TC;
-    shared_ptr < RectColliderComponent> m_RCC;
+    shared_ptr<TransformComponent> m_TC; //  so that the invader can move
+    shared_ptr < RectColliderComponent> m_RCC;//update its location and be collided with
+
+    //query the position of the player and 
+    //make decisions about when to shoot bullets
     shared_ptr < TransformComponent> m_PlayerTC;
     shared_ptr < RectColliderComponent> m_PlayerRCC;
+
+    
     BulletSpawner* m_BulletSpawner;
     float m_Speed = 10.0f;
     bool m_MovingRight = true;
