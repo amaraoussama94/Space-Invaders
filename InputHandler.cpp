@@ -1,5 +1,7 @@
 #include <sstream>
+#include"SelectUIPanel.hpp"/**************************************/
 #include "InputHandler.hpp"
+#include <iostream>
 
 using namespace sf;
 using namespace std;
@@ -33,16 +35,16 @@ void InputHandler::handleInput(RenderWindow& window,
 	// Handle any left mouse click released
 	if (event.type == Event::MouseButtonReleased)
 	{
+		 
 		auto end = m_Buttons.end();
 
 		for (auto i = m_Buttons.begin();
 			i != end;
 			++i) {
-
 			if ((*i)->m_Collider.contains(
 				window.mapPixelToCoords(Mouse::getPosition(),
-				(*getPointerToUIView()))))
-			{
+				(*getPointerToUIView()))))/*********************************************************************************************************/
+			{ 
 				// Capture the text of the button that was interacted 
 				// with and pass it to the specialised version 
 				// of this class if implemented

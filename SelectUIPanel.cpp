@@ -14,7 +14,6 @@ SelectUIPanel::SelectUIPanel(Vector2i res) :
 	m_ButtonWidth = res.x / 20;
 	m_ButtonHeight = res.y / 20;
 	m_ButtonPadding = res.x / 100;
-
 	m_Text.setFillColor(sf::Color(0, 255, 0, 255));
 	m_Text.setString("SPACE INVADERS ++");
 
@@ -25,16 +24,16 @@ SelectUIPanel::SelectUIPanel(Vector2i res) :
 	m_Text.setPosition(Vector2f(m_ButtonPadding,
 		m_ButtonHeight + (m_ButtonPadding * 2)));
 
-	m_Text.setCharacterSize(160);
+	m_Text.setCharacterSize(110);
 
-	initialiseButtons();
+	initialiseButtons( );
 }
 
-void SelectUIPanel::initialiseButtons()
+void SelectUIPanel::initialiseButtons( )
 {
 	// Buttons are positioned relative to the top left 
 	// corner of the UI panel(m_View in UIPanel)
-	addButton(m_ButtonPadding,
+	addButton( m_ButtonPadding,
 		m_ButtonPadding,
 		m_ButtonWidth,
 		m_ButtonHeight,
