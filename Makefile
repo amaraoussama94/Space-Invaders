@@ -1,6 +1,6 @@
 #main app
-Sapce_Invaders: GameEngine.o  SpaceInvaders++.o  SoundEngine.o ScreenManager.o BitmapStore.o Button.o UIPanel.o InputHandler.o Screen.o SelectScreen.o SelectInputHandler.o SelectUIPanel.o GameScreen.o GameInputHandler.o GameUIPanel.o GameOverInputHandler.o   GameOverUIPanel.o                                                                                                                                                                              
-	g++ GameEngine.o  SpaceInvaders++.o SoundEngine.o ScreenManager.o BitmapStore.o Button.o UIPanel.o InputHandler.o  Screen.o SelectScreen.o SelectInputHandler.o SelectUIPanel.o  GameScreen.o GameInputHandler.o GameUIPanel.o  GameOverInputHandler.o GameOverUIPanel.o -o Sapce_Invaders -lsfml-graphics -lsfml-window -lsfml-audio -lsfml-system  
+Sapce_Invaders: GameEngine.o  SpaceInvaders++.o  SoundEngine.o ScreenManager.o BitmapStore.o Button.o UIPanel.o InputHandler.o Screen.o SelectScreen.o SelectInputHandler.o SelectUIPanel.o GameScreen.o GameInputHandler.o GameUIPanel.o GameOverInputHandler.o   GameOverUIPanel.o RectColliderComponent.o                                                                                                                                                                             
+	g++ GameEngine.o  SpaceInvaders++.o SoundEngine.o ScreenManager.o BitmapStore.o Button.o UIPanel.o InputHandler.o  Screen.o SelectScreen.o SelectInputHandler.o SelectUIPanel.o  GameScreen.o GameInputHandler.o GameUIPanel.o  GameOverInputHandler.o GameOverUIPanel.o RectColliderComponent.o -o Sapce_Invaders -lsfml-graphics -lsfml-window -lsfml-audio -lsfml-system  
 
 #*
 GameEngine.o:GameEngine.cpp  
@@ -73,6 +73,12 @@ GameOverInputHandler.o:GameOverInputHandler.cpp
 #GameOverUIPanel*
 GameOverUIPanel.o:GameOverUIPanel.cpp
 	g++ -c GameOverUIPanel.cpp 
+
+
+#Rect ColliderC omponent*
+RectColliderComponent.o:RectColliderComponent.cpp
+	g++ -c RectColliderComponent.cpp 
+
 
 
 clean:
