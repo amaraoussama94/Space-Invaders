@@ -18,7 +18,7 @@ private:
     string m_Type = "graphics";
     bool m_Enabled = false;
 public:
-    virtual void draw(RenderWindow& window,shared_ptr<TransformComponent> t) = 0;
+    virtual void draw(RenderWindow& window,shared_ptr<TransformComponent> t) = 0;//shared_ptr :vital data such as position and scale can be accessed each frame of the game
     virtual void initializeGraphics(string bitmapName,Vector2f objectSize) = 0;
 
     /****************************************************
