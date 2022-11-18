@@ -6,6 +6,8 @@ class Component;
 class StandardGraphicsComponent : public GraphicsComponent 
 {
 private:
+    //It doesn't need a Texture instance because that
+    // will be obtained each frame from the BitmapStoreclass.
     sf::Sprite m_Sprite;
     string m_SpecificType = "standard";
 public:
