@@ -35,12 +35,7 @@ UIPanel.o:UIPanel.cpp
 InputHandler.o:InputHandler.cpp
 	g++ -c InputHandler.cpp 
 
-#Screen   class *
-Screen.o:Screen.cpp
-	g++ -c Screen.cpp  
-
-#Select Screen   class *
-SelectScreen.o:SelectScreen.cpp
+#Screen   class *GameObject.o
 	g++ -c SelectScreen.cpp 
 
 
