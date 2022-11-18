@@ -2,6 +2,8 @@
 #include "GameObjectSharer.h"
 #include <string>
 
+
+/******************This is the base class of every component in every game object.***********************/
 using namespace std;
 class GameObject;
 class Component
