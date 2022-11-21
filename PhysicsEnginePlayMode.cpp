@@ -128,3 +128,15 @@ void PhysicsEnginePlayMode::detectPlayerCollisionsAndInvaderDirection(vector<Gam
         }
     }
 }
+void PhysicsEnginePlayMode::handleInvaderDirection()
+{
+    if (m_InvaderHitWallThisFrame) 
+    {
+        m_NeedToDropDownAndReverse = true;
+        m_InvaderHitWallThisFrame = false;
+    }
+    else 
+    {
+        m_NeedToDropDownAndReverse = false;
+    }
+}
