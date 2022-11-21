@@ -1,5 +1,11 @@
 #include "GameScreen.hpp"
 
+#include "GameObject.hpp"
+#include "WorldState.hpp"
+#include "BulletUpdateComponent.hpp"
+#include "InvaderUpdateComponent.hpp"
+
+class BulletSpawner;
 int WorldState::WORLD_HEIGHT;
 int WorldState::NUM_INVADERS;
 int WorldState::NUM_INVADERS_AT_START;
@@ -43,7 +49,28 @@ GameScreen::GameScreen(ScreenManagerRemoteControl* smrc,
 void GameScreen::initialise()//initialize
 {
 	m_GIH->initialize();
+	m_PhysicsEnginePlayMode.initilize(m_ScreenManagerRemoteControl->shareGameObjectSharer());
 	WorldState::NUM_INVADERS = 0;
+
+	// Store all the bullet locations and
+	// Initialize all the BulletSpawners in the invaders
+	// Count the number of invaders
+	int i = 0;
+	auto it = m_ScreenManagerRemoteControl->getGameObjects().begin();
+	auto end = m_ScreenManagerRemoteControl->getGameObjects().end();
+	for (it;it != end;++it)
+	{
+		if ((*it).getTag() == "bullet")
+		{
+			m_BulletObjectLocations.push_back(i);
+		}
+		if ((*it).getTag() == "invader")
+		{
+			static_pointer_cast<InvaderUpdateComponent>((*it).getFirstUpdateComponent())->initializeBulletSpawner(getBulletSpawner(), i);
+			WorldState::NUM_INVADERS++;
+		}
+		++i;
+	}
 
 	m_GameOver = false;
 
