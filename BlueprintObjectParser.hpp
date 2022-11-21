@@ -5,8 +5,8 @@ using namespace std;
 class BlueprintObjectParser 
 {
 private:
-    string extractStringBetweenTags(
-    string stringToSearch, string startTag, string endTag);
+    //will capture the content between two tags.
+    string extractStringBetweenTags(string stringToSearch, string startTag, string endTag);
 public:
     void parseNextObjectForBlueprint(ifstream& reader, GameObjectBlueprint& bp);
 };
