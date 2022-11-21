@@ -141,7 +141,7 @@ FloatRect& GameObject::getEncompassingRectCollider()
 {
     if (m_HasCollider)
     {
-        return (static_pointer_cast<RectColliderComponent>(m_Components[m_FirstRectColliderComponentLocation]))->getColliderRectF();
+        return( (static_pointer_cast<RectColliderComponent>(m_Components[m_FirstRectColliderComponentLocation]))->getColliderRectF());
     }
 }
 
