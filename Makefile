@@ -1,6 +1,6 @@
 #main app
-Sapce_Invaders: GameEngine.o  SpaceInvaders++.o  SoundEngine.o ScreenManager.o BitmapStore.o Button.o UIPanel.o InputHandler.o Screen.o SelectScreen.o SelectInputHandler.o SelectUIPanel.o GameScreen.o GameInputHandler.o GameUIPanel.o GameOverInputHandler.o   GameOverUIPanel.o RectColliderComponent.o StandardGraphicsComponent.o  TransformComponent.o BulletUpdateComponent.o InvaderUpdateComponent.o PlayerUpdate.o  GameObject.o GameObjectBlueprint.o ObjectTags.o BlueprintObjectParser.o PlayModeObjectLoader.o GameObjectFactoryPlayMode.o                                                                                                                                                                    
-	g++ GameEngine.o  SpaceInvaders++.o SoundEngine.o ScreenManager.o BitmapStore.o Button.o UIPanel.o InputHandler.o  Screen.o SelectScreen.o SelectInputHandler.o SelectUIPanel.o  GameScreen.o GameInputHandler.o GameUIPanel.o  GameOverInputHandler.o GameOverUIPanel.o RectColliderComponent.o StandardGraphicsComponent.o TransformComponent.o BulletUpdateComponent.o InvaderUpdateComponent.o PlayerUpdate.o GameObject.o GameObjectBlueprint.o ObjectTags.o BlueprintObjectParser.o  PlayModeObjectLoader.o GameObjectFactoryPlayMode.o -o Sapce_Invaders -lsfml-graphics -lsfml-window -lsfml-audio -lsfml-system  
+Sapce_Invaders: GameEngine.o  SpaceInvaders++.o  SoundEngine.o ScreenManager.o BitmapStore.o Button.o UIPanel.o InputHandler.o Screen.o SelectScreen.o SelectInputHandler.o SelectUIPanel.o GameScreen.o GameInputHandler.o GameUIPanel.o GameOverInputHandler.o   GameOverUIPanel.o RectColliderComponent.o StandardGraphicsComponent.o  TransformComponent.o BulletUpdateComponent.o InvaderUpdateComponent.o PlayerUpdate.o  GameObject.o GameObjectBlueprint.o ObjectTags.o BlueprintObjectParser.o PlayModeObjectLoader.o GameObjectFactoryPlayMode.o  LevelManager.o                                                                                                                                                                  
+	g++ GameEngine.o  SpaceInvaders++.o SoundEngine.o ScreenManager.o BitmapStore.o Button.o UIPanel.o InputHandler.o  Screen.o SelectScreen.o SelectInputHandler.o SelectUIPanel.o  GameScreen.o GameInputHandler.o GameUIPanel.o  GameOverInputHandler.o GameOverUIPanel.o RectColliderComponent.o StandardGraphicsComponent.o TransformComponent.o BulletUpdateComponent.o InvaderUpdateComponent.o PlayerUpdate.o GameObject.o GameObjectBlueprint.o ObjectTags.o BlueprintObjectParser.o  PlayModeObjectLoader.o GameObjectFactoryPlayMode.o LevelManager.o -o Sapce_Invaders -lsfml-graphics -lsfml-window -lsfml-audio -lsfml-system  
 
 #*
 GameEngine.o:GameEngine.cpp  
@@ -117,6 +117,10 @@ PlayModeObjectLoader.o:PlayModeObjectLoader.cpp
 #Game Object Factory Play Mode*
 GameObjectFactoryPlayMode.o:GameObjectFactoryPlayMode.cpp
 	g++ -c GameObjectFactoryPlayMode.cpp 
+
+#Level Manager*
+LevelManager.o:LevelManager.cpp
+	g++ -c LevelManager.cpp 
 
 clean:
 #cleanup all object file
