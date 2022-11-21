@@ -22,6 +22,8 @@ void PhysicsEnginePlayMode::detectInvaderCollisions(vector<GameObject>& objects,
             auto bulletEnd = objects.end();
             for (bulletIt;bulletIt != bulletEnd;++bulletIt)
             {
+                /*The next if statement checks whether the current invader has collided with the
+                current bullet and whether that bullet was fired by the player*/
                 if ((*invaderIt).getEncompassingRectCollider().intersects((*bulletIt).getEncompassingRectCollider())
                 && (*bulletIt).getTag() == "bullet"
                 && static_pointer_cast<
@@ -35,6 +37,92 @@ void PhysicsEnginePlayMode::detectInvaderCollisions(vector<GameObject>& objects,
                     WorldState::SCORE++;
                     WorldState::NUM_INVADERS--;
                     (*invaderIt).setInactive();
+                }
+            }
+        }
+    }
+}
+void PhysicsEnginePlayMode::detectPlayerCollisionsAndInvaderDirection(vector<GameObject>& objects,const vector<int>& bulletPositions)
+{
+    Vector2f offScreen(-1, -1);
+    FloatRect playerCollider =m_Player->getEncompassingRectCollider();
+    shared_ptr<TransformComponent> playerTransform =m_Player->getTransformComponent();
+    Vector2f playerLocation =playerTransform->getLocation();
+    auto it3 = objects.begin();
+    auto end3 = objects.end();
+    for (it3;it3 != end3;++it3)
+    {
+        if ((*it3).isActive() &&(*it3).hasCollider() &&(*it3).getTag() != "Player")
+        {
+            // Get a reference to all the parts of
+            // the current game object we might need
+            FloatRect currentCollider = (*it3).getEncompassingRectCollider();
+            // Detect collisions between objects
+            // with the player
+            if (currentCollider.intersects(playerCollider))
+            {
+                if ((*it3).getTag() == "bullet")
+                {
+                    SoundEngine::playPlayerExplode();
+                    WorldState::LIVES--;
+                    (*it3).getTransformComponent()->getLocation() = offScreen;
+                }
+                if ((*it3).getTag() == "invader")
+                {
+                    SoundEngine::playPlayerExplode();
+                    SoundEngine::playInvaderExplode();
+                    WorldState::LIVES--;
+                    (*it3).getTransformComponent()->getLocation() = offScreen;
+                    WorldState::SCORE++;(*it3).setInactive();
+                    }
+            }
+            shared_ptr<TransformComponent>currentTransform =(*it3).getTransformComponent();
+            Vector2f currentLocation =currentTransform->getLocation();
+            string currentTag = (*it3).getTag();
+            Vector2f currentSize =currentTransform->getSize();
+            // Handle the direction and descent
+            // of the invaders
+            if (currentTag == "invader")
+            {
+                // This is an invader
+                if (!m_NeedToDropDownAndReverse &&!m_InvaderHitWallThisFrame)
+                {
+                    // Currently no need to dropdown
+                    // and reverse from previous frame
+                    // or any hits this frame
+                    if (currentLocation.x >=WorldState::WORLD_WIDTH - currentSize.x)
+                    {
+                        // The invader is passed its
+                        // furthest right position
+                        if (static_pointer_cast<InvaderUpdateComponent>((*it3).getFirstUpdateComponent())->isMovingRight())
+                        {
+                            // The invader is travelling
+                            // right so set a flag that
+                            // an invader has collided
+                            m_InvaderHitWallThisFrame= true;
+                        }
+                    }
+                    else if (currentLocation.x < 0)
+                    {
+                        // The invader is past its furthest
+                        // left position
+                        if (!static_pointer_cast<InvaderUpdateComponent>((*it3).getFirstUpdateComponent())->isMovingRight())
+                        {
+                            // The invader is travelling
+                            // left so set a flag that an
+                            // invader has collided
+                            m_InvaderHitWallThisFrame= true;
+                        }
+                    }
+                }
+                else if (m_NeedToDropDownAndReverse&& !m_InvaderHitWallPreviousFrame)
+                {
+                // Drop down and reverse has been set
+                if ((*it3).hasUpdateComponent())
+                {
+                // Drop down and reverse
+                static_pointer_cast<InvaderUpdateComponent>((*it3).getFirstUpdateComponent())->dropDownAndReverse();
+                }
                 }
             }
         }
