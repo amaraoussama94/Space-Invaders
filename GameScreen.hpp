@@ -32,4 +32,30 @@ public:
 	void virtual draw(RenderWindow& window);
 	/// @brief bullrt thing
 	BulletSpawner* getBulletSpawner();
+	/****************************************************
+*****************************************************
+From BulletSpawner interface
+*****************************************************
+*****************************************************/
+	void  spawnBullet(Vector2f spawnLocation,bool forPlayer)
+	{
+		if (forPlayer)
+		{
+			Time elapsedTime = m_BulletClock.getElapsedTime();
+			if (elapsedTime.asMilliseconds() > 500) 
+			{
+				m_PlayerBulletSpawnLocation.x = spawnLocation.x;
+				m_PlayerBulletSpawnLocation.y = spawnLocation.y;
+				m_WaitingToSpawnBulletForPlayer = true;
+				m_BulletClock.restart();
+			}
+		}
+		else
+		{
+			m_InvaderBulletSpawnLocation.x = spawnLocation.x;
+			m_InvaderBulletSpawnLocation.y = spawnLocation.y;
+			m_WaitingToSpawnBulletForInvader = true;
+		}
+	}
+
 };
