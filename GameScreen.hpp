@@ -5,7 +5,8 @@
 #include "GameOverInputHandler.hpp"
 #include "GameOverUIPanel.hpp"
 #include "WorldState.hpp"
-class GameScreen : public Screen
+#include "BulletSpawner.hpp"
+class GameScreen : public Screen, public BulletSpawner //yeah weird thing it just multi inherentis thing 
 {
 private:
     ScreenManagerRemoteControl* m_ScreenManagerRemoteControl;
