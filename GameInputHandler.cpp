@@ -10,6 +10,37 @@ void GameInputHandler::initialize()
 }
 void GameInputHandler::handleGamepad()
 {
+    /*The zero parameter requests data from the primary gamepad. You can use values 0
+    through 7 to get input from eight gamepads.*/
+    float deadZone = 10.0f;
+    float x = Joystick::getAxisPosition(0, sf::Joystick::X);
+    float y = Joystick::getAxisPosition(0, sf::Joystick::Y);
+    if (x < deadZone && x > -deadZone)
+    {
+        x = 0;
+    }
+    if (y < deadZone && y > -deadZone)
+    {
+        y = 0;
+    }
+    m_PUC->updateShipTravelWithController(x, y);
+    // Has the player pressed the B button?
+    if (Joystick::isButtonPressed(0, 1))
+    {
+        mBButtonPressed = true;
+    }
+    // Has player just released the B button?
+    if (!Joystick::isButtonPressed(0, 1) && mBButtonPressed)
+    {
+        mBButtonPressed = false;
+        // Shoot a bullet
+        SoundEngine::playShoot();
+        Vector2f spawnLocation;
+        spawnLocation.x = m_PTC->getLocation().x +m_PTC->getSize().x / 2;
+        spawnLocation.y = m_PTC->getLocation().y;
+        static_cast<GameScreen*>(getmParentScreen())->
+        getBulletSpawner()->spawnBullet(spawnLocation, true);
+    }
 }
 void GameInputHandler::handleKeyPressed(Event& event, RenderWindow& window)
 {
