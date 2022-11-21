@@ -41,4 +41,29 @@ void GameInputHandler::handleKeyPressed(Event& event, RenderWindow& window)
 }
 void GameInputHandler::handleKeyReleased(Event& event, RenderWindow& window)
 {
+    if (event.key.code == Keyboard::Left)
+    {
+        m_PUC->stopLeft();
+    }
+    else if (event.key.code == Keyboard::Right)
+    {
+        m_PUC->stopRight();
+    }
+    else if (event.key.code == Keyboard::Up)
+    {
+        m_PUC->stopUp();
+    }
+    else if (event.key.code == Keyboard::Down)
+    {
+        m_PUC->stopDown();
+    }
+    else if (event.key.code == Keyboard::Space)
+    {
+        // Shoot a bullet
+        SoundEngine::playShoot();
+        Vector2f spawnLocation;
+        spawnLocation.x = m_PTC->getLocation().x +m_PTC->getSize().x / 2;
+        spawnLocation.y = m_PTC->getLocation().y;
+        static_cast<GameScreen*>(getmParentScreen())->spawnBullet(spawnLocation, true);
+    }
 }
