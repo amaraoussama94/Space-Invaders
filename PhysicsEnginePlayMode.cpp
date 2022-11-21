@@ -128,6 +128,7 @@ void PhysicsEnginePlayMode::detectPlayerCollisionsAndInvaderDirection(vector<Gam
         }
     }
 }
+
 void PhysicsEnginePlayMode::handleInvaderDirection()
 {
     if (m_InvaderHitWallThisFrame) 
@@ -139,4 +140,11 @@ void PhysicsEnginePlayMode::handleInvaderDirection()
     {
         m_NeedToDropDownAndReverse = false;
     }
+}
+
+void PhysicsEnginePlayMode::initilize(GameObjectSharer& gos) 
+{
+    m_PUC = static_pointer_cast<PlayerUpdateComponent>( gos.findFirstObjectWithTag("Player")
+    .getComponentByTypeAndSpecificType("update", "player"));
+    m_Player = &gos.findFirstObjectWithTag("Player");
 }
