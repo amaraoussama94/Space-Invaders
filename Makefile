@@ -1,6 +1,6 @@
 #main app
-Sapce_Invaders: GameEngine.o  SpaceInvaders++.o  SoundEngine.o ScreenManager.o BitmapStore.o Button.o UIPanel.o InputHandler.o Screen.o SelectScreen.o SelectInputHandler.o SelectUIPanel.o GameScreen.o GameInputHandler.o GameUIPanel.o GameOverInputHandler.o   GameOverUIPanel.o RectColliderComponent.o StandardGraphicsComponent.o  TransformComponent.o BulletUpdateComponent.o InvaderUpdateComponent.o PlayerUpdate.o  GameObject.o GameObjectBlueprint.o                                                                                                                                                                       
-	g++ GameEngine.o  SpaceInvaders++.o SoundEngine.o ScreenManager.o BitmapStore.o Button.o UIPanel.o InputHandler.o  Screen.o SelectScreen.o SelectInputHandler.o SelectUIPanel.o  GameScreen.o GameInputHandler.o GameUIPanel.o  GameOverInputHandler.o GameOverUIPanel.o RectColliderComponent.o StandardGraphicsComponent.o TransformComponent.o BulletUpdateComponent.o InvaderUpdateComponent.o PlayerUpdate.o GameObject.o GameObjectBlueprint.o -o Sapce_Invaders -lsfml-graphics -lsfml-window -lsfml-audio -lsfml-system  
+Sapce_Invaders: GameEngine.o  SpaceInvaders++.o  SoundEngine.o ScreenManager.o BitmapStore.o Button.o UIPanel.o InputHandler.o Screen.o SelectScreen.o SelectInputHandler.o SelectUIPanel.o GameScreen.o GameInputHandler.o GameUIPanel.o GameOverInputHandler.o   GameOverUIPanel.o RectColliderComponent.o StandardGraphicsComponent.o  TransformComponent.o BulletUpdateComponent.o InvaderUpdateComponent.o PlayerUpdate.o  GameObject.o GameObjectBlueprint.o ObjectTags.o                                                                                                                                                                      
+	g++ GameEngine.o  SpaceInvaders++.o SoundEngine.o ScreenManager.o BitmapStore.o Button.o UIPanel.o InputHandler.o  Screen.o SelectScreen.o SelectInputHandler.o SelectUIPanel.o  GameScreen.o GameInputHandler.o GameUIPanel.o  GameOverInputHandler.o GameOverUIPanel.o RectColliderComponent.o StandardGraphicsComponent.o TransformComponent.o BulletUpdateComponent.o InvaderUpdateComponent.o PlayerUpdate.o GameObject.o GameObjectBlueprint.o ObjectTags.o -o Sapce_Invaders -lsfml-graphics -lsfml-window -lsfml-audio -lsfml-system  
 
 #*
 GameEngine.o:GameEngine.cpp  
@@ -101,6 +101,10 @@ GameObject.o:GameObject.cpp
 #Game Object Blueprint *
 GameObjectBlueprint.o:GameObjectBlueprint.cpp
 	g++ -c GameObjectBlueprint.cpp 
+
+#Object Tags *
+ObjectTags.o:ObjectTags.cpp
+	g++ -c ObjectTags.cpp 
 
 clean:
 #cleanup all object file
