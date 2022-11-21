@@ -14,6 +14,15 @@ private:
     
     Texture m_BackgroundTexture;
 	Sprite m_BackgroundSprite;
+	int m_NumberInvadersInWorldFile = 0;
+	/// @brief bullet thing 
+	vector<int> m_BulletObjectLocations;
+	int m_NextBullet = 0;
+	bool m_WaitingToSpawnBulletForPlayer = false;
+	bool m_WaitingToSpawnBulletForInvader = false;
+	Vector2f m_PlayerBulletSpawnLocation;
+	Vector2f m_InvaderBulletSpawnLocation;
+	Clock m_BulletClock;
 public:
     static bool m_GameOver;
 
@@ -21,4 +30,6 @@ public:
 	void initialise() override;
 	void virtual update(float fps);
 	void virtual draw(RenderWindow& window);
+	/// @brief bullrt thing
+	BulletSpawner* getBulletSpawner();
 };
