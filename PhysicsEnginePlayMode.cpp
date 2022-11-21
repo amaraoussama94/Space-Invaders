@@ -148,3 +148,10 @@ void PhysicsEnginePlayMode::initilize(GameObjectSharer& gos)
     .getComponentByTypeAndSpecificType("update", "player"));
     m_Player = &gos.findFirstObjectWithTag("Player");
 }
+
+void PhysicsEnginePlayMode::detectCollisions(vector<GameObject>& objects,const vector<int>& bulletPositions)
+{
+    detectInvaderCollisions(objects, bulletPositions);
+    detectPlayerCollisionsAndInvaderDirection(objects, bulletPositions);
+    handleInvaderDirection();
+}
