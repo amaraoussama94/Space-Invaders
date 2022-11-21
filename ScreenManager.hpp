@@ -6,7 +6,7 @@
 #include "GameScreen.hpp"
 #include "ScreenManagerRemoteControl.hpp"
 #include "SelectScreen.hpp"
-//#include "LevelManager.hpp"
+#include "LevelManager.hpp"
 #include "BitmapStore.hpp"
 
 
@@ -19,7 +19,7 @@ private:
    //This will allow us to grab the functionality of a specific Screen
     //instance by using the corresponding string
 	map <string, unique_ptr<Screen>> m_Screens;
-	//LevelManager m_LevelManager;
+	LevelManager m_LevelManager;
 
 protected:
 	string m_CurrentScreen = "Select";
@@ -51,8 +51,7 @@ public:
 		SwitchScreens("Game");
 	}
 
-	/*vector<GameObject>& 
-		ScreenManagerRemoteControl::getGameObjects()
+	vector<GameObject>& getGameObjects()
 	{
 		return m_LevelManager.getGameObjects();
 	}
@@ -60,5 +59,5 @@ public:
 	GameObjectSharer& shareGameObjectSharer()
 	{
 		return m_LevelManager;
-	}*/
+	}
 };
