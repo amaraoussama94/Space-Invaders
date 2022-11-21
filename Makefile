@@ -1,6 +1,6 @@
 #main app
 Sapce_Invaders: GameEngine.o  SpaceInvaders++.o  SoundEngine.o ScreenManager.o BitmapStore.o Button.o UIPanel.o InputHandler.o Screen.o SelectScreen.o SelectInputHandler.o SelectUIPanel.o GameScreen.o GameInputHandler.o GameUIPanel.o GameOverInputHandler.o   GameOverUIPanel.o RectColliderComponent.o StandardGraphicsComponent.o  TransformComponent.o BulletUpdateComponent.o InvaderUpdateComponent.o PlayerUpdate.o  GameObject.o GameObjectBlueprint.o ObjectTags.o BlueprintObjectParser.o PlayModeObjectLoader.o GameObjectFactoryPlayMode.o  LevelManager.o PhysicsEnginePlayMode.o                                                                                                                                                                 
-	g++ GameEngine.o  SpaceInvaders++.o SoundEngine.o ScreenManager.o BitmapStore.o Button.o UIPanel.o InputHandler.o  Screen.o SelectScreen.o SelectInputHandler.o SelectUIPanel.o  GameScreen.o GameInputHandler.o GameUIPanel.o  GameOverInputHandler.o GameOverUIPanel.o RectColliderComponent.o StandardGraphicsComponent.o TransformComponent.o BulletUpdateComponent.o InvaderUpdateComponent.o PlayerUpdate.o GameObject.o GameObjectBlueprint.o ObjectTags.o BlueprintObjectParser.o  PlayModeObjectLoader.o GameObjectFactoryPlayMode.o LevelManager.o PhysicsEnginePlayMode.o -o Sapce_Invaders -lsfml-graphics -lsfml-window -lsfml-audio -lsfml-system  
+	g++ GameEngine.o  SpaceInvaders++.o SoundEngine.o ScreenManager.o BitmapStore.o Button.o UIPanel.o InputHandler.o  Screen.o SelectScreen.o SelectInputHandler.o SelectUIPanel.o  GameScreen.o GameInputHandler.o GameUIPanel.o  GameOverInputHandler.o GameOverUIPanel.o RectColliderComponent.o StandardGraphicsComponent.o TransformComponent.o  BulletUpdateComponent.o InvaderUpdateComponent.o PlayerUpdate.o GameObject.o GameObjectBlueprint.o ObjectTags.o BlueprintObjectParser.o  PlayModeObjectLoader.o GameObjectFactoryPlayMode.o LevelManager.o PhysicsEnginePlayMode.o -o Sapce_Invaders -lsfml-graphics -lsfml-window -lsfml-audio -lsfml-system  
 
 #*
 GameEngine.o:GameEngine.cpp  
@@ -78,7 +78,7 @@ RectColliderComponent.o:RectColliderComponent.cpp
 StandardGraphicsComponent.o:StandardGraphicsComponent.cpp
 	g++ -c StandardGraphicsComponent.cpp 
 
-#TransformC omponent*
+#Transform Component*
 TransformComponent.o:TransformComponent.cpp
 	g++ -c TransformComponent.cpp 
 

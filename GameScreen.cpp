@@ -158,10 +158,6 @@ void GameScreen::draw(RenderWindow& window)
 	Screen::draw(window);
 }
 
-BulletSpawner* GameScreen::getBulletSpawner()
-{
-return this;
-}
 
 /*This returns a pointer to GameScreen, which gives us access to the spawnBullet
 function.*/
