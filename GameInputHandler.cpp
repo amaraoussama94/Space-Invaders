@@ -10,9 +10,10 @@ void GameInputHandler::initialize()
 }
 void GameInputHandler::handleGamepad()
 {
-    /*The zero parameter requests data from the primary gamepad. You can use values 0
-    through 7 to get input from eight gamepads.*/
+   
     float deadZone = 10.0f;
+     /*The zero parameter requests data from the primary gamepad. You can use values 0
+    through 7 to get input from eight gamepads.*/
     float x = Joystick::getAxisPosition(0, sf::Joystick::X);
     float y = Joystick::getAxisPosition(0, sf::Joystick::Y);
     if (x < deadZone && x > -deadZone)
