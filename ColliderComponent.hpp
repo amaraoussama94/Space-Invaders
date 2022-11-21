@@ -12,23 +12,23 @@ public:
 From Component interface
 *****************************************************
 *****************************************************/
-virtual  string Component::getType() 
+virtual  string getType() 
 {
 return m_Type;
 }
-virtual void Component::disableComponent() 
+virtual void disableComponent() 
 {
 m_Enabled = false;
 }
-virtual void Component::enableComponent()
+virtual void enableComponent()
  {
 m_Enabled = true;
 }
-virtual bool Component::enabled() 
+virtual bool enabled() 
 {
 return m_Enabled;
 }
-virtual void Component::start(GameObjectSharer* gos, GameObject* self)
+virtual void  start(GameObjectSharer* gos, GameObject* self)
 {
 }
 };

@@ -1,8 +1,8 @@
 #pragma once
 #include <string>
 #include <vector>
-#include "GameObject.h"
-#include "GameObjectSharer.h"
+#include "GameObject.hpp"
+#include "GameObjectSharer.hpp"
 #include <memory>//for shared pointer
 using namespace std;
 

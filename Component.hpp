@@ -1,5 +1,5 @@
  #pragma once
-#include "GameObjectSharer.h"
+#include "GameObjectSharer.hpp"
 #include <string>
 
 
