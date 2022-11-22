@@ -24,7 +24,7 @@ SelectUIPanel::SelectUIPanel(Vector2i res) :
 	m_Text.setPosition(Vector2f(m_ButtonPadding,
 		m_ButtonHeight + (m_ButtonPadding * 2)));
 
-	m_Text.setCharacterSize(110);
+	m_Text.setCharacterSize(80);
 
 	initialiseButtons( );
 }

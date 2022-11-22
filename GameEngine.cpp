@@ -5,7 +5,7 @@ GameEngine::GameEngine()
 	m_Resolution.x = VideoMode::getDesktopMode().width;
 	m_Resolution.y = VideoMode::getDesktopMode().height;
 	m_Window.create(VideoMode(m_Resolution.x, m_Resolution.y),
-		"Space Invaders++");//, Style::Fullscreen
+		"Space Invaders++", Style::Fullscreen);//
 //ScreenManager instance is initialized using new which
     //passes in the resolution to the ScreenManager constructor
 	m_ScreenManager = unique_ptr<ScreenManager>(new ScreenManager(
