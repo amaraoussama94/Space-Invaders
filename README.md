@@ -22,7 +22,7 @@ Enter to pause and start game </br>
 *Game name:Sapce Invaders</br>
 *version :0.1</br>
 *here we use :entity-component pattern ,Strategy pattern(composition),Factory pattern ,C++ smart pointers(shared pointers,Unique pointers),assertions.</br>
-<h3 align="left">diagram:</h3>   
+<h3 align="left">diagram 1:</h3>   
 <p align="center">
     <img src="https://github.com/amaraoussama94/Space-Invaders/blob/main/diagram.png"  >  
 </p>
@@ -31,6 +31,10 @@ instances that it can display selectively and that UIPanel instances can have ze
 more Button instances. Each UIPanel will have a related InputHandler because
 each UIPanel will have different combinations and layouts of buttons. The buttons
 are shared via pointers between UIPanel and InputHandler instances
- 
+<h3 align="left">diagram 2:</h3>   
+<p align="center">
+    <img src="https://github.com/amaraoussama94/Space-Invaders/blob/main/diagram_2.png"  >  
+</p>
+
 
  
