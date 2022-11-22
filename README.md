@@ -23,9 +23,9 @@ Enter to pause and start game </br>
 *version :0.1</br>
 *here we use :entity-component pattern ,Strategy pattern(composition),Factory pattern ,C++ smart pointers(shared pointers,Unique pointers),assertions.</br>
 <h3 align="left">diagram:</h3>   
-<!--<p align="center">
-    <img src="https://github.com/amaraoussama94/Thomas-Wass-Alone/blob/main/game_pic.png"  >  
-</p>-->
+<p align="center">
+    <img src="https://github.com/amaraoussama94/Space-Invaders/blob/main/diagram.png"  >  
+</p>
 In the preceding diagram, we can see that a screen has one or more UIPanel
 instances that it can display selectively and that UIPanel instances can have zero or
 more Button instances. Each UIPanel will have a related InputHandler because
