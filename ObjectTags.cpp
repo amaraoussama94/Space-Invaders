@@ -17,5 +17,8 @@ const string ObjectTags::LOCATION_Y = "[LOCATION Y]";
 const string ObjectTags::LOCATION_Y_END = "[-LOCATION Y]";
 const string ObjectTags::BITMAP_NAME = "[BITMAP NAME]";
 const string ObjectTags::BITMAP_NAME_END = "[-BITMAP NAME]";
-const string ObjectTags::ENCOMPASSING_RECT_COLLIDER ="[ENCOMPASSING RECT COLLIDER]";
-const string ObjectTags::ENCOMPASSING_RECT_COLLIDER_END= "[-ENCOMPASSING_RECT COLLIDER]";
+const string ObjectTags::ENCOMPASSING_RECT_COLLIDER =
+"[ENCOMPASSING RECT COLLIDER]";
+
+const string ObjectTags::ENCOMPASSING_RECT_COLLIDER_END
+= "[-ENCOMPASSING_RECT COLLIDER]";

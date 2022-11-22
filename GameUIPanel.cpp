@@ -1,4 +1,6 @@
 #include "GameUIPanel.hpp"
+#include <sstream>
+#include "WorldState.hpp"
 
 int WorldState::SCORE;
 int WorldState::LIVES;
