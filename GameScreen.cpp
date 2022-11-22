@@ -1,11 +1,14 @@
 #include "GameScreen.hpp"
-
-#include "GameObject.hpp"
+#include "GameUIPanel.hpp"
+#include "GameInputHandler.hpp"
+#include "GameOverUIPanel.hpp"
 #include "WorldState.hpp"
+#include "GameObject.hpp"
 #include "BulletUpdateComponent.hpp"
 #include "InvaderUpdateComponent.hpp"
 
 class BulletSpawner;
+
 int WorldState::WORLD_HEIGHT;
 int WorldState::NUM_INVADERS;
 int WorldState::NUM_INVADERS_AT_START;
@@ -45,20 +48,28 @@ GameScreen::GameScreen(ScreenManagerRemoteControl* smrc,
 		float(m_View.getSize().y) / textureSize.y);
 }
 
-
-void GameScreen::initialise()//initialize
+void GameScreen::initialise()
 {
 	m_GIH->initialize();
-	m_PhysicsEnginePlayMode.initilize(m_ScreenManagerRemoteControl->shareGameObjectSharer());
+	m_PhysicsEnginePlayMode.initilize(
+		m_ScreenManagerRemoteControl->
+		shareGameObjectSharer());
+
 	WorldState::NUM_INVADERS = 0;
 
 	// Store all the bullet locations and
 	// Initialize all the BulletSpawners in the invaders
 	// Count the number of invaders
 	int i = 0;
-	auto it = m_ScreenManagerRemoteControl->getGameObjects().begin();
-	auto end = m_ScreenManagerRemoteControl->getGameObjects().end();
-	for (it;it != end;++it)
+	auto it = m_ScreenManagerRemoteControl->
+		getGameObjects().begin();
+
+	auto end = m_ScreenManagerRemoteControl->
+		getGameObjects().end();
+
+	for (it;
+		it != end;
+		++it)
 	{
 		if ((*it).getTag() == "bullet")
 		{
@@ -66,9 +77,14 @@ void GameScreen::initialise()//initialize
 		}
 		if ((*it).getTag() == "invader")
 		{
-			static_pointer_cast<InvaderUpdateComponent>((*it).getFirstUpdateComponent())->initializeBulletSpawner(getBulletSpawner(), i);
+			static_pointer_cast<InvaderUpdateComponent>(
+				(*it).getFirstUpdateComponent())->
+				initializeBulletSpawner(
+					getBulletSpawner(), i);
+
 			WorldState::NUM_INVADERS++;
 		}
+
 		++i;
 	}
 
@@ -77,7 +93,7 @@ void GameScreen::initialise()//initialize
 	if (WorldState::WAVE_NUMBER == 0)
 	{
 		WorldState::NUM_INVADERS_AT_START =
-		WorldState::NUM_INVADERS;
+			WorldState::NUM_INVADERS;
 
 		WorldState::WAVE_NUMBER = 1;
 		WorldState::LIVES = 3;
@@ -85,43 +101,65 @@ void GameScreen::initialise()//initialize
 	}
 }
 
-
 void GameScreen::update(float fps)
 {
 	Screen::update(fps);
-    if (!m_GameOver)
-    {
+
+	if (!m_GameOver)
+	{
 		if (m_WaitingToSpawnBulletForPlayer)
 		{
-			static_pointer_cast<BulletUpdateComponent>(m_ScreenManagerRemoteControl->getGameObjects()
-			[m_BulletObjectLocations[m_NextBullet]].getFirstUpdateComponent())->spawnForPlayer(m_PlayerBulletSpawnLocation);
+			static_pointer_cast<BulletUpdateComponent>(
+				m_ScreenManagerRemoteControl->
+				getGameObjects()
+				[m_BulletObjectLocations[m_NextBullet]].
+				getFirstUpdateComponent())->
+				spawnForPlayer(m_PlayerBulletSpawnLocation);
+
 			m_WaitingToSpawnBulletForPlayer = false;
 			m_NextBullet++;
+
 			if (m_NextBullet == m_BulletObjectLocations.size())
 			{
 				m_NextBullet = 0;
 			}
 		}
+
 		if (m_WaitingToSpawnBulletForInvader)
 		{
-			static_pointer_cast<BulletUpdateComponent>(m_ScreenManagerRemoteControl->getGameObjects()[m_BulletObjectLocations[m_NextBullet]].
-			getFirstUpdateComponent())->spawnForInvader(m_InvaderBulletSpawnLocation);
+			static_pointer_cast<BulletUpdateComponent>(
+				m_ScreenManagerRemoteControl->
+				getGameObjects()
+				[m_BulletObjectLocations[m_NextBullet]].
+				getFirstUpdateComponent())->
+				spawnForInvader(m_InvaderBulletSpawnLocation);
+
 			m_WaitingToSpawnBulletForInvader = false;
 			m_NextBullet++;
-			if (m_NextBullet ==m_BulletObjectLocations.size())
+
+			if (m_NextBullet == m_BulletObjectLocations.size())
 			{
 				m_NextBullet = 0;
 			}
 		}
-		auto it = m_ScreenManagerRemoteControl->getGameObjects().begin();
-		auto end = m_ScreenManagerRemoteControl->getGameObjects().end();
-		for (it;it != end;++it)
+
+		auto it = m_ScreenManagerRemoteControl->
+			getGameObjects().begin();
+
+		auto end = m_ScreenManagerRemoteControl->
+			getGameObjects().end();
+
+		for (it;
+			it != end;
+			++it)
 		{
 			(*it).update(fps);
 		}
+
 		m_PhysicsEnginePlayMode.detectCollisions(
-		m_ScreenManagerRemoteControl->getGameObjects(),
-		m_BulletObjectLocations);
+			m_ScreenManagerRemoteControl->getGameObjects(),
+			m_BulletObjectLocations);
+
 		if (WorldState::NUM_INVADERS <= 0)
 		{
 			WorldState::WAVE_NUMBER++;
@@ -136,10 +174,6 @@ void GameScreen::update(float fps)
 	}
 }
 
-
-
-
-
 void GameScreen::draw(RenderWindow& window)
 {
 	// Change to this screen's view to draw
@@ -147,9 +181,15 @@ void GameScreen::draw(RenderWindow& window)
 	window.draw(m_BackgroundSprite);
 
 	// Draw the GameObject instances
-	auto it = m_ScreenManagerRemoteControl->getGameObjects().begin();
-	auto end = m_ScreenManagerRemoteControl->getGameObjects().end();
-	for (it;it != end;++it)
+	auto it = m_ScreenManagerRemoteControl->
+		getGameObjects().begin();
+
+	auto end = m_ScreenManagerRemoteControl->
+		getGameObjects().end();
+
+	for (it;
+		it != end;
+		++it)
 	{
 		(*it).draw(window);
 	}
@@ -158,10 +198,9 @@ void GameScreen::draw(RenderWindow& window)
 	Screen::draw(window);
 }
 
-
 /*This returns a pointer to GameScreen, which gives us access to the spawnBullet
 function.*/
 BulletSpawner* GameScreen::getBulletSpawner()
 {
-return this;
+	return this;
 }

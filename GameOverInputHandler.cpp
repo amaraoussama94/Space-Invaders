@@ -17,8 +17,7 @@ void GameOverInputHandler::handleKeyPressed(Event& event,
 
 void GameOverInputHandler::handleLeftClick(
 	std::string& buttonInteractedWith, RenderWindow& window)
-{
-	//If the Play button is clicked, a new game.
+{//If the Play button is clicked, a new game.
    	// is started by calling loadLevelInPlayMode,
 	//while, if the Home button is clicked, then 
        //the select screen will be shown.
