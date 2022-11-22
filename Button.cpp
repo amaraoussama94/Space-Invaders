@@ -20,7 +20,7 @@ Button::Button(Vector2f position,
 	m_ButtonText.setPosition(Vector2f((position.x + textPaddingX),
 		(position.y + textPaddingY)));
 
-	m_Collider = FloatRect(position, Vector2f(width, height));/******************************************************************************************/
+	m_Collider = FloatRect(position, Vector2f(width, height));
 }
 
 void Button::draw(RenderWindow& window)
