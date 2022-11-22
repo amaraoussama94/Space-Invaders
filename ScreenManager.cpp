@@ -1,8 +1,7 @@
 #include "ScreenManager.hpp"
 
 ScreenManager::ScreenManager(Vector2i res)
-{
- //adds two Screen instances to the map instance first, 
+{//adds two Screen instances to the map instance first, 
     //a GameScreen instance with a key of "Game" and then a SelectScreen
     //instance with a key of "Select"
 	m_Screens["Game"] = unique_ptr<GameScreen>(
