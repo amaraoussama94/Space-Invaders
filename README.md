@@ -36,5 +36,8 @@ are shared via pointers between UIPanel and InputHandler instances
     <img src="https://github.com/amaraoussama94/Space-Invaders/blob/main/diagram_2.png"  >  
 </p>
 
-
+<h3 align="left">The structure of the file I/O and factory classes:</h3>   
+<p align="center">
+    <img src="https://github.com/amaraoussama94/Space-Invaders/blob/main/The%20structure%20of%20the%20file%20I-O%20and%20factory%20classes.png"  >  
+</p>
  
