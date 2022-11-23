@@ -2,8 +2,9 @@
 #include "GameObjectBlueprint.hpp"
 #include "GameObject.hpp"
 #include <vector>
-class GameObjectFactoryPlayMode 
-{
+
+class GameObjectFactoryPlayMode {
 public:
-    void buildGameObject(GameObjectBlueprint& bp,std::vector <GameObject>& gameObjects);
+	void buildGameObject(GameObjectBlueprint& bp,
+		std::vector <GameObject>& gameObjects);
 };

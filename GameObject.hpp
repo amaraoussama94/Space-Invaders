@@ -2,7 +2,6 @@
 #include <SFML/Graphics.hpp>
 #include <vector>
 #include <string>
-#include <memory>// for shared ptr
 #include "Component.hpp"
 #include "GraphicsComponent.hpp"
 #include "GameObjectSharer.hpp"
