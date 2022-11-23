@@ -1,22 +1,20 @@
 #pragma once
-#include <iostream>
 #include <SFML/Graphics.hpp>
 #include <map>
-
 #include "GameScreen.hpp"
 #include "ScreenManagerRemoteControl.hpp"
 #include "SelectScreen.hpp"
 #include "LevelManager.hpp"
 #include "BitmapStore.hpp"
-
+#include <iostream>
 
 using namespace sf;
 using namespace std;
 
-class ScreenManager : public ScreenManagerRemoteControl 
-{
+class ScreenManager : public ScreenManagerRemoteControl
+ {
 private:
-   //This will allow us to grab the functionality of a specific Screen
+ //This will allow us to grab the functionality of a specific Screen
     //instance by using the corresponding string
 	map <string, unique_ptr<Screen>> m_Screens;
 	LevelManager m_LevelManager;
@@ -43,11 +41,11 @@ public:
 		m_Screens[m_CurrentScreen]->initialise();
 	}
 
-	void loadLevelInPlayMode(string screenToLoad)
+	void  loadLevelInPlayMode(string screenToLoad)
 	{
-		/*m_LevelManager.getGameObjects().clear();
+		m_LevelManager.getGameObjects().clear();
 		m_LevelManager.
-			loadGameObjectsForPlayMode(screenToLoad);*/
+			loadGameObjectsForPlayMode(screenToLoad);
 		SwitchScreens("Game");
 	}
 
