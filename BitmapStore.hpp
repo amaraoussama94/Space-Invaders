@@ -1,20 +1,20 @@
-//#pragma once
+#pragma once
 #ifndef BITMAP_STORE_H
 #define BITMAP_STORE_H
+
 #include <SFML/Graphics.hpp>
 #include <map>
-#include <assert.h>
-using namespace sf;
-using namespace std;
+#include <cassert>
 
 class BitmapStore
 {
 private:
-    std::map<std::string, sf::Texture> m_BitmapsMap;
-    static BitmapStore* m_s_Instance;
+	std::map<std::string, sf::Texture> m_BitmapsMap;
+	static BitmapStore* m_s_Instance;
+
 public:
-    BitmapStore();
-    static sf::Texture& getBitmap(std::string const& filename);
-    static void addBitmap(std::string const& filename);
+	BitmapStore();
+	static sf::Texture& getBitmap(std::string const& filename);
+	static void addBitmap(std::string const& filename);
 };
 #endif
