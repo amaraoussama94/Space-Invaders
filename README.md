@@ -15,8 +15,12 @@ install make :-sudo apt-get install  make</br>
 <h3 align="left">Generale info: </h3>    
 *Game control :
 escape to close  game</br>
-Enter to pause and start game </br>
- 
+Use the Ui panel to start the game or </br>
+ Up key : to go up</br>
+ Down key : to go down</br>
+ Left key : to go Left</br>
+ Right key : to go Right</br>
+ Sapce :for shotting </br>
 
 
 *Game name:Sapce Invaders</br>
