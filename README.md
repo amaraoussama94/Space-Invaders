@@ -24,7 +24,7 @@ Use the Ui panel to start the game or </br>
 
 
 *Game name:Sapce Invaders</br>
-*version :0.1</br>
+*version :0.8</br>
 *here we use :entity-component pattern ,Strategy pattern(composition),Factory pattern ,C++ smart pointers(shared pointers,Unique pointers),assertions.</br>
 <h3 align="left">diagram 1:</h3>   
 <p align="center">
