@@ -1,3 +1,12 @@
+/**
+ * @file GameUIPanel.cpp
+ * @brief Implementation of the GameUIPanel class.
+ * This class represents the in-game user interface panel,
+ * displaying score, lives, and wave number.
+ * @version 1.0
+ * @date 2024-08-31
+ * @author Oussama Amara	
+ */
 #include "GameUIPanel.hpp"
 #include <sstream>
 #include "WorldState.hpp"

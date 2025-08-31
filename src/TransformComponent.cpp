@@ -1,3 +1,12 @@
+/**
+ * @file TransformComponent.cpp
+ * @brief Implementation of the TransformComponent class.
+ * This class represents the position and size of a game object in 2D space.
+ * It provides methods to access and modify the object's location and dimensions.
+ * @version 1.0
+ * @date 2024-08-31
+ * @author Oussama Amara
+ */
 #include "TransformComponent.hpp"
 
 TransformComponent::TransformComponent(

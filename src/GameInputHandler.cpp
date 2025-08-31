@@ -1,3 +1,13 @@
+/**
+ * @file GameInputHandler.cpp
+ * @brief Implementation of the GameInputHandler class.
+ * This class handles user input for the game, including
+ * keyboard and gamepad inputs, and translates them into
+ * actions for the player character.
+ * @version 1.0
+ * @date 2024-08-31
+ * @author Oussama Amara
+ */
 #include "GameInputHandler.hpp"
 #include "SoundEngine.hpp"
 #include "GameScreen.hpp"

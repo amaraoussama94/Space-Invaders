@@ -1,3 +1,12 @@
+/**
+ * @file GameOverUIPanel.cpp
+ * @brief Implementation of the GameOverUIPanel class.
+ * This class represents the UI panel displayed when the game is over.
+ * 	It includes buttons for restarting the game or returning to the home screen.
+ * @version 1.0
+ * @date 2024-08-31
+ * @author Oussama Amara
+ */
 #include "GameOverUIPanel.hpp"
 #include "GameScreen.hpp"
 

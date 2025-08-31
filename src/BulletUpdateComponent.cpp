@@ -1,3 +1,12 @@
+/**
+ * @file BulletUpdateComponent.cpp
+ * @brief Implementation of the BulletUpdateComponent class.
+ * This class manages the behavior of bullets in the game,
+ * including their spawning, movement, and despawning.
+ * @version 1.0
+ * @date 2024-08-31
+ * @author Oussama Amara
+ */
 #include "BulletUpdateComponent.hpp"
 #include "WorldState.hpp"
 

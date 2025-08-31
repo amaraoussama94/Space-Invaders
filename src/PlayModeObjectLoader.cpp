@@ -1,3 +1,14 @@
+/**
+ * @file PlayModeObjectLoader.cpp
+ * @brief Implementation of the PlayModeObjectLoader class.
+ * This class is responsible for loading game objects for play mode
+ * from a specified file path. It utilizes the BlueprintObjectParser
+ * to parse game object blueprints and the GameObjectFactoryPlayMode
+ * to build game objects based on the parsed blueprints.
+ * @version 1.0
+ * @date 2024-08-31
+ * @author Oussama Amara
+ */
 #include "PlayModeObjectLoader.hpp"
 #include "ObjectTags.hpp"
 #include <iostream>

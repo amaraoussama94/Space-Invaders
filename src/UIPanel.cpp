@@ -1,3 +1,13 @@
+/**
+ * @file UIPanel.cpp
+ * @brief Implementation of the UIPanel class.
+ * This class represents a user interface panel in the game,
+ * which can contain buttons and other UI elements.
+ * It provides functionality to show, hide, and draw the panel.
+ * @version 1.0
+ * @date 2024-08-31
+ * @author Oussama Amara
+ */
 #include "UIPanel.hpp"
 
 UIPanel::UIPanel(Vector2i res, int x, int y,

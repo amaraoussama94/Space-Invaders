@@ -1,4 +1,13 @@
- /*********************************
+/**
+ * @file ScreenManagerRemoteControl.cpp
+ * @brief Implementation of the ScreenManagerRemoteControl class.
+ * This class manages different screens in the game, allowing for screen transitions    
+ * and loading levels in play mode.
+ * @version 1.0
+ * @date 2024-08-31
+ * @author Oussama Amara
+ */
+/*********************************
 ******THIS IS AN INTERFACE********
 *********************************/
 

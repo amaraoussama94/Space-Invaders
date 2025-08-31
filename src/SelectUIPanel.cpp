@@ -1,3 +1,14 @@
+/**
+ * @file SelectUIPanel.cpp
+ * @brief Implementation of the SelectUIPanel class.
+ * This class represents a selection UI panel in the Space Invaders game,
+ * allowing players to choose options such as "Play" or "Quit".
+ * It inherits from the UIPanel class and initializes buttons and text
+ * specific to the selection panel.
+ * @version 1.0
+ * @date 2024-08-31
+ * @author Oussama Amara
+ */
 #include "SelectUIPanel.hpp"
 #include <iostream>
 

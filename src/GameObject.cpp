@@ -1,3 +1,12 @@
+/**
+ * @file GameObject.cpp
+ * @brief Implementation of the GameObject class.
+ * This class represents a game object in the game world,
+ * managing its components and behavior.
+ * @version 1.0
+ * @date 2024-08-31
+ * 	@author Oussama Amara
+ */
 #include "DevelopState.hpp"
 #include "GameObject.hpp"
 #include <iostream> 

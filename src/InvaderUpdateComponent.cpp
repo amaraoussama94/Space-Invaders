@@ -1,3 +1,12 @@
+/**
+ * @file InvaderUpdateComponent.cpp
+ * @brief Implementation of the InvaderUpdateComponent class.
+ * This class handles the behavior of invader game objects,
+ * including movement, shooting, and interaction with the player.
+ * @version 1.0
+ * @date 2024-08-31
+ * @author Oussama Amara
+ */
 #include "InvaderUpdateComponent.hpp"
 #include "BulletSpawner.hpp"
 #include "WorldState.hpp"

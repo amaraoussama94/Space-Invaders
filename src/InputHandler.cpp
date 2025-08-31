@@ -1,3 +1,13 @@
+/**
+ * @file InputHandler.cpp
+ * @brief Implementation of the InputHandler class.
+ * 	This class is responsible for handling user input events
+ * such as keyboard and mouse interactions.
+ * @version 1.0
+ * @date 2024-08-31
+ * @author Oussama Amara
+ * 
+ */
 #include <sstream>
 #include "InputHandler.hpp"
 

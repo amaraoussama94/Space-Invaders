@@ -1,3 +1,13 @@
+/**
+ * @file StandardGraphicsComponent.cpp
+ * @brief Implementation of the StandardGraphicsComponent class.
+ * This class handles the graphical representation of game objects
+ * using standard bitmap images.
+ * @version 1.0
+ * @date 2024-08-31
+ * @author Oussama Amara
+*/
+
 #include "StandardGraphicsComponent.hpp"
 #include "BitmapStore.hpp"
 #include <iostream>

@@ -1,3 +1,12 @@
+/**
+ * @file GameObjectFactoryPlayMode.cpp
+ * @brief Implementation of the GameObjectFactoryPlayMode class.
+ * This class is responsible for building game objects
+ * based on predefined blueprints for the play mode of the game.
+ * @version 1.0
+ * @date 2024-08-31
+ * @author Oussama Amara
+ */
 #include "GameObjectFactoryPlayMode.hpp"
 #include <iostream>
 #include "TransformComponent.hpp"

@@ -1,3 +1,13 @@
+/**
+ * @file ObjectTags.cpp
+ * @brief Implementation of the ObjectTags class.
+ * This class defines constant string tags used for parsing game object
+ * blueprints from a file.
+ * @version 1.0
+ * @date 2024-08-31
+ * @author Oussama Amara
+ * 
+ */
 #include "DevelopState.hpp"
 #include "ObjectTags.hpp"
 

@@ -1,3 +1,13 @@
+/**
+ * @file BlueprintObjectParser.cpp
+ * @brief Implementation of the BlueprintObjectParser class.
+ * This class is responsible for parsing game object blueprints from a file.
+ * It extracts various attributes of game objects such as name, dimensions,
+ * location, components, and bitmap names.
+ * @version 1.0
+ * @date 2024-08-31
+ * @author Oussama Amara
+ */
 #include "BlueprintObjectParser.hpp"
 #include "ObjectTags.hpp"
 #include <iostream>

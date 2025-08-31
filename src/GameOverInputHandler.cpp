@@ -1,3 +1,12 @@
+/**
+ * @file GameOverInputHandler.cpp
+ * @brief Implementation of the GameOverInputHandler class.
+ * This class handles user input events on the Game Over screen,
+ * such as key presses and button clicks.
+ * @version 1.0
+ * @date 2024-08-31
+ * @author Oussama Amara
+ */
 #include "GameOverInputHandler.hpp"
 #include "SoundEngine.hpp"
 #include "WorldState.hpp"

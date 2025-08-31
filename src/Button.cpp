@@ -1,3 +1,12 @@
+/**
+ * @file Button.cpp
+ * @brief Implementation of the Button class.
+ * This class represents a clickable button in the game's UI.
+ * It handles rendering the button and its text.
+ * @version 1.0
+ * @date 2024-08-31
+ * @author Oussama Amara
+ */
 #include "Button.hpp"
 
 Button::Button(Vector2f position,

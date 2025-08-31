@@ -1,3 +1,12 @@
+/**
+ * @file GameObjectBlueprint.cpp
+ * @brief Implementation of the GameObjectBlueprint class.
+ * This class represents a blueprint for creating game objects,
+ * including their properties and components.
+ * @version 1.0
+ * @date 2024-08-31
+ * @author Oussama Amara
+ */
 #include "GameObjectBlueprint.hpp"
 
 float GameObjectBlueprint::getWidth() {

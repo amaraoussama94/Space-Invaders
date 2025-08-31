@@ -1,4 +1,13 @@
- #include "BitmapStore.hpp"
+/**
+ * @file BitmapStore.cpp
+ * @brief Implementation of the BitmapStore class.
+ * This class manages a collection of textures (bitmaps) using a singleton pattern.
+ * It allows adding and retrieving textures by their filenames.
+ * @version 1.0
+ * @date 2024-08-31
+ * @author Oussama Amara
+ */
+#include "BitmapStore.hpp"
 
 BitmapStore* BitmapStore::m_s_Instance = nullptr;
 

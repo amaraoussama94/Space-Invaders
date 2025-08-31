@@ -1,3 +1,12 @@
+/**
+ * @file PlayerUpdate.cpp
+ * @brief Implementation of the PlayerUpdateComponent class.
+ * This class handles player input and updates the player's position
+ * based on keyboard and gamepad input.
+ * @version 1.0
+ * @date 2024-08-31
+ * @author Oussama Amara
+ */
 #include "PlayerUpdateComponent.hpp"
 #include "WorldState.hpp"
 

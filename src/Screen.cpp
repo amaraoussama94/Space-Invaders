@@ -1,3 +1,13 @@
+/**
+ * @file Screen.cpp
+ * @brief Implementation of the Screen class.
+ * This class serves as a base for different screens in the application,
+ * 	such as menus and game screens.
+ * It manages input handlers and UI panels.
+ * @version 1.0
+ * @date 2024-08-31
+ * @author Oussama Amara
+ */
 #include "Screen.hpp"
 
 void Screen::initialise() {}

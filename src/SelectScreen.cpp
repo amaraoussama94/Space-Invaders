@@ -1,3 +1,13 @@
+/**
+ * @file SelectScreen.cpp
+ * @brief Implementation of the SelectScreen class.
+ * This class represents the selection screen in the game,
+ * allowing players to choose options such as starting the game or quitting.
+ * It manages the background display and integrates the UI panel for user interaction.
+ * @version 1.0
+ * @date 2024-08-31
+ * @author Oussama Amara
+ */
 #include "SelectScreen.hpp"
 #include "SelectUIPanel.hpp"
 #include "SelectInputHandler.hpp"

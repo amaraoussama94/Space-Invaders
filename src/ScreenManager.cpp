@@ -1,3 +1,13 @@
+/**
+ * 	@file ScreenManager.cpp
+ * 	@brief Implementation of the ScreenManager class.
+ * 	This class is responsible for managing different screens in the game,
+ * 	such as the game screen and the select screen. It handles screen switching,
+ * 	level loading, and provides access to game objects and shared resources.
+ * 	@version 1.0
+ * 	@date 2024-08-31
+ * 	@author Oussama Amara
+ */
 #include "ScreenManager.hpp"
 
 ScreenManager::ScreenManager(Vector2i res)

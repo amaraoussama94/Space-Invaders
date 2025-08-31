@@ -1,3 +1,12 @@
+/**
+ * @file SelectInputHandler.cpp
+ * @brief Implementation of the SelectInputHandler class.
+ * This class handles user input specifically for the selection screen,
+ * allowing users to start the game or quit the application.
+ * @version 1.0
+ * @date 2024-08-31
+ * @author Oussama Amara
+ */
 #include "SelectInputHandler.hpp"
 #include "SoundEngine.hpp"
 #include "WorldState.hpp"

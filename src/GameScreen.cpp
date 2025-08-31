@@ -1,3 +1,15 @@
+/**
+ * @file GameScreen.cpp
+ * @brief Implementation of the GameScreen class.
+ * This class manages the main gameplay screen, including
+ * game object updates, rendering, and user input handling.
+ * It also implements the BulletSpawner interface to handle
+ * bullet spawning for both the player and invaders.
+ * @version 1.0
+ * @date 2024-08-31
+ * @author Oussama Amara
+ * 
+ */
 #include "GameScreen.hpp"
 #include "GameUIPanel.hpp"
 #include "GameInputHandler.hpp"

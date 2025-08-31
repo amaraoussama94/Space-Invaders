@@ -1,3 +1,12 @@
+/**
+ * @file GameEngine.cpp
+ * @brief Implementation of the GameEngine class.
+ * This class manages the main game loop, including
+ * handling input, updating game state, and rendering.
+ * @version 1.0
+ * @date 2024-08-31
+ * @author Oussama Amara
+ */
 #include "GameEngine.hpp"
 
 GameEngine::GameEngine()

@@ -1,3 +1,12 @@
+/**
+ * @file SoundEngine.cpp
+ * @brief Implementation of the SoundEngine class.
+ * This class manages the sound effects in the game,
+ * including loading sound files and playing them.
+ * @version 1.0
+ * @date 2024-08-31
+ * @author Oussama Amara
+ */
 #include <SFML/Audio.hpp>
 #include <assert.h>
 #include "SoundEngine.hpp"

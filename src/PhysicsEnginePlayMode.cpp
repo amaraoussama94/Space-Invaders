@@ -1,3 +1,12 @@
+/**
+ * @file PhysicsEnginePlayMode.cpp
+ * @brief Implementation of the PhysicsEnginePlayMode class.
+ * This class handles collision detection and response
+ * for game objects in play mode, including player and invader interactions.
+ * @version 1.0
+ * @date 2024-08-31
+ * @author Oussama Amara
+ */
 #include "DevelopState.hpp"
 #include "PhysicsEnginePlayMode.hpp"
 #include <iostream>
