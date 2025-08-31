@@ -198,13 +198,13 @@ jobs:
           cp -r graphics release/Space_Invaders-linux/ || echo "No graphics folder"
           cp -r graphics release/Space_Invaders-windows/ || echo "No graphics folder"
 
-          # Copy sounds to both
-          cp -r sounds release/Space_Invaders-linux/ || echo "No sounds folder"
-          cp -r sounds release/Space_Invaders-windows/ || echo "No sounds folder"
+          # Copy Sounds to both
+          cp -r sound release/Space_Invaders-linux/ || echo "No sounds folder"
+          cp -r sound release/Space_Invaders-windows/ || echo "No sounds folder"
 
           # Copy levels to both
-          cp -r levels release/Space_Invaders-linux/ || echo "No levels folder"
-          cp -r levels release/Space_Invaders-windows/ || echo "No levels folder"
+          cp -r world release/Space_Invaders-linux/ || echo "No levels folder"
+          cp -r world release/Space_Invaders-windows/ || echo "No levels folder"
 
       - name: Create zip archives
         run: |
