@@ -1,3 +1,12 @@
+/**
+ * @file PlayerUpdateComponent.hpp
+ * @brief This file contains the declaration of the PlayerUpdateComponent class.
+ * The PlayerUpdateComponent class is responsible for handling the player's
+ * movement and interactions in the game.
+ * @version 1.0
+ * @date 2024-08-31
+ * @author Oussama Amara
+ */
 #pragma once
 #include "UpdateComponent.hpp"
 #include "TransformComponent.hpp"

@@ -1,3 +1,12 @@
+/**
+ * @file SoundEngine.hpp
+ * @brief This file contains the declaration of the SoundEngine class.
+ * The SoundEngine class is responsible for managing and playing sound effects
+ * used in the application. It provides functionality to load and play various sound effects efficiently.
+ * @version 1.0
+ * @date 2024-08-31
+ * @author Oussama Amara
+ */
 #pragma once
 #ifndef SOUND_ENGINE_H
 #define SOUND_ENGINE_H

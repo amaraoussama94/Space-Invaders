@@ -1,3 +1,13 @@
+/**
+ * @file Screen.hpp
+ * @brief This file contains the declaration of the Screen class.
+ * The Screen class serves as a base class for different screens
+ * in the application, providing functionality for initialization,
+ * updating, drawing, and handling input events.
+ * @version 1.0
+ * @date 2024-08-31
+ * @author Oussama Amara
+ */
 #pragma once
 #include <SFML/Graphics.hpp>
 #include <vector>

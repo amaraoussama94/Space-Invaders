@@ -1,3 +1,12 @@
+/**
+ * @file ScreenManagerRemoteControl.hpp
+ * @brief This file contains the declaration of the ScreenManagerRemoteControl class.
+ * The ScreenManagerRemoteControl class provides an interface for managing screen transitions
+ * and sharing game objects within the application.
+ * @version 1.0
+ * @date 2024-08-31
+ * @author Oussama Amara
+ */
 #pragma once
 #include <string>
 #include <vector>

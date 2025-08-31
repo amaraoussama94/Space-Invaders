@@ -1,3 +1,12 @@
+/**
+ * @file RectColliderComponent.hpp
+ * @brief This file contains the declaration of the RectColliderComponent class.
+ * The RectColliderComponent class represents a rectangular collider component
+ * used for collision detection in game objects.
+ * @version 1.0
+ * @date 2024-08-31
+ * @author Oussama Amara
+ */
 #pragma once
 #include "ColliderComponent.hpp"
 #include <SFML/Graphics.hpp>

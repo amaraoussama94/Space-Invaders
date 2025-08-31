@@ -1,3 +1,12 @@
+/**
+ * @file TransformComponent.hpp
+ * @brief This file contains the declaration of the TransformComponent class.
+ * The TransformComponent class represents the position and size of a game object in the game world.
+ * It provides functionality to get and set the location and size of the game object.
+ * @version 1.0
+ * @date 2024-08-31
+ * @author Oussama Amara
+ */
 #pragma once
 #include "Component.hpp"
 #include<SFML/Graphics.hpp>

@@ -1,3 +1,12 @@
+/**
+ * @file InputHandler.hpp
+ * @brief This file contains the declaration of the InputHandler class.
+ * The InputHandler class is responsible for managing user input events
+ * such as keyboard and mouse interactions within the application.
+ * @version 1.0
+ * @date 2024-08-31
+ * @author Oussama Amara
+ */
 #pragma once
 #include <SFML/Graphics.hpp>
 #include <vector>

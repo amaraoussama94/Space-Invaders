@@ -1,6 +1,17 @@
+/**
+ * @file UIPanel.hpp
+ * @brief This file contains the declaration of the UIPanel class.	
+ * The UIPanel class represents a user interface panel that can contain buttons and manage its visibility.
+ * It provides functionality to add buttons, show or hide the panel, and draw it on a
+ * render window.
+ * @version 1.0
+ * @date 2024-08-31
+ * @author Oussama Amara
+ */
 #pragma once
 #include <memory>// for shared pointer elkse  you will get error  unique pointer doest need it 
 #include <SFML/Graphics.hpp>
+
 #include "Button.hpp"
 
 using namespace std;

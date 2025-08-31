@@ -1,3 +1,12 @@
+/**
+ * @file GraphicsComponent.hpp
+ * @brief This file contains the declaration of the GraphicsComponent class.
+ * The GraphicsComponent class is an abstract base class for graphical components
+ * of game objects, providing an interface for rendering and initializing graphics.
+ * @version 1.0
+ * @date 2024-08-31
+ * @author Oussama Amara
+ */
 #pragma once
 #include "Component.hpp"
 #include "TransformComponent.hpp"

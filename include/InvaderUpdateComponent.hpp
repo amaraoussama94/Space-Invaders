@@ -1,3 +1,12 @@
+/**
+ * @file InvaderUpdateComponent.hpp
+ * @brief This file contains the declaration of the InvaderUpdateComponent class.
+ * The InvaderUpdateComponent class is responsible for managing the behavior
+ * of invader game objects, including movement and shooting mechanics.
+ * @version 1.0
+ * @date 2024-08-31
+ * @author Oussama Amara
+ */
 #pragma once
 #include "UpdateComponent.hpp"
 #include "TransformComponent.hpp"

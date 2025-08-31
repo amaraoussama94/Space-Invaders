@@ -1,3 +1,14 @@
+/**
+ * @file GameObject.hpp
+ * @brief This file contains the declaration of the GameObject class.
+ * 
+ * The GameObject class represents an entity in the game world that can have multiple components
+ * such as graphics, update logic, and collision detection. It provides methods to manage its
+ * components, update its state, and render itself on the screen.
+ * @version 1.0
+ * @date 2024-08-31
+ * @author Oussama Amara
+ */
 #pragma once
 #include <SFML/Graphics.hpp>
 #include <vector>

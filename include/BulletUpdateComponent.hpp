@@ -1,3 +1,14 @@
+/**
+ * @file BulletUpdateComponent.hpp
+ * @brief This file contains the declaration of the BulletUpdateComponent class.
+ * The BulletUpdateComponent class is responsible for managing the behavior
+ * of bullet objects in the game, including their movement and spawning logic.
+ * It inherits from the UpdateComponent class and implements the update method
+ * to define how bullets move each frame.
+ * @version 1.0
+ * @date 2024-08-31
+ * @author Oussama Amara
+ */
 #pragma once
 #include "UpdateComponent.hpp"
 #include "TransformComponent.hpp"

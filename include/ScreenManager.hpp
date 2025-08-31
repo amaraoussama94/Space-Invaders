@@ -1,3 +1,13 @@
+/**
+ * 	@file ScreenManager.hpp
+ * 	@brief This file contains the declaration of the ScreenManager class.
+ * The ScreenManager class is responsible for managing different screens
+ * in the application, allowing for switching between them and handling
+ * their updates and rendering.
+ * 	@version 1.0
+ * 	@date 2024-08-31
+ * 	@author Oussama Amara
+ */
 #pragma once
 #include <SFML/Graphics.hpp>
 #include <map>

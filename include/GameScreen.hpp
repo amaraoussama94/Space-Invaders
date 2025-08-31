@@ -1,3 +1,14 @@
+/**
+ * @file GameScreen.hpp
+ * @brief This file contains the declaration of the GameScreen class.
+ * The GameScreen class is a derived class of Screen and BulletSpawner,
+ * representing the main game screen. It provides functionality to
+ * initialize, update, and draw the game elements, as well as
+ * spawn bullets for the player and invaders.
+ * @version 1.0
+ * @date 2024-08-31
+ * @author Oussama Amara
+ */
 #pragma once
 #include "Screen.hpp"
 #include "GameInputHandler.hpp"

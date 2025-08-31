@@ -1,3 +1,12 @@
+/**
+ * @file GameObjectBlueprint.hpp
+ * @brief This file contains the declaration of the GameObjectBlueprint class.
+ * The GameObjectBlueprint class is used to define the blueprint of a game object,
+ * including its name, components, bitmap, dimensions, location, speed, and collider properties.
+ * @version 1.0
+ * @date 2024-08-31
+ * @author Oussama Amara
+ */
 #pragma once
 #include<vector>
 #include<string>

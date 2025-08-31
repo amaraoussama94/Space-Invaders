@@ -1,3 +1,13 @@
+/**
+ * @file GameEngine.hpp
+ * @brief This file contains the declaration of the GameEngine class.
+ * The GameEngine class is responsible for managing the main game loop,
+ * handling input, updating game state, and rendering graphics. It serves
+ * 	as the core of the game application.
+ * @version 1.0
+ * @date 2024-08-31
+ * @author Oussama Amara
+ */
 #pragma once
 #include <SFML/Graphics.hpp>
 #include "ScreenManager.hpp"

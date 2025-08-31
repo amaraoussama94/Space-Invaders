@@ -1,4 +1,13 @@
-
+/**
+ * @file Component.hpp
+ * @brief This file contains the declaration of the Component class.
+ * The Component class serves as the base class for all components
+ * in the game object system. It defines the interface that all
+ * derived component classes must implement.
+ * @version 1.0
+ * @date 2024-08-31
+ * @author Oussama Amara
+ */
 /******************This is the base class of every component in every game object.***********************/
 #pragma once
 #include "GameObjectSharer.hpp"
